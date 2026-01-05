@@ -2,7 +2,7 @@
 # https://www.nostarch.com/crackingcodes/(BSD Licensed)
 
 message = 'Three can keep a secret, if two of them are dead.'
-translated = ''
+translated: str = ''
 
 i = len(message) - 1
 while i >= 0:
