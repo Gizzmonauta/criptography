@@ -1,18 +1,27 @@
-# Reverse Cipheer
+# Reverse Cipher
 # https://www.nostarch.com/crackingcodes/(BSD Licensed)
 
-def reverseCipher() -> str:
-    translated: str = ''
+def reverse_cipher(message: str) -> str:
+    """Reverse the order of characters in a message.
+    
+    Args:
+        message: The string to reverse
+        
+    Returns:
+        The reversed string
+    """
 
-    print('Enter message to be reversed:')
-    myMessage: str = input() 
-
-    i = len(myMessage) - 1
-    while i >= 0:
-        translated = translated + myMessage[i]
-        i = i - 1
-
-    return translated
+    # Option 1: Pythonic slicing (fastest)
+    return message[::-1]
+    
+    # Option 2: If you want to keep it educational with a loop,
+    # use a list to build the result:
+    # result = []
+    # for i in range(len(message) - 1, -1, -1):
+    #     result.append(message[i])
+    # return ''.join(result)
 
 if __name__ == '__main__':
-    print(reverseCipher())
+    print("Enter a message to reverse: ", end="")
+    message = input()
+    print(reverse_cipher(message))
