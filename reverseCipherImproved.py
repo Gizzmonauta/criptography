@@ -21,7 +21,10 @@ def reverse_cipher(message: str) -> str:
     #     result.append(message[i])
     # return ''.join(result)
 
-if __name__ == '__main__':
+def main():
     print("Enter a message to reverse: ", end="")
     message = input()
     print(reverse_cipher(message))
+
+if __name__ == '__main__':
+    main()

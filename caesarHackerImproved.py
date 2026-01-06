@@ -88,13 +88,16 @@ def parse_arguments() -> argparse.Namespace:
         help='Custom symbol set to use (default: built-in set)'
     )
     return parser.parse_args()
-    
-if __name__ == "__main__":
+
+def main():
     args: argparse.Namespace = parse_arguments()
     result: List[Tuple[int, str]] = hack_caesar_cipher(args.message, args.symbols)
 
     print(f"\nTrying all {len(SYMBOLS)} possible keys for: '{args.message}'\n")
     print("\n".join(f"Key {key}: {text}" for key, text in result))
+    
+if __name__ == "__main__":
+    main()
 
 """
 Optional Enhancements (if you want to take it further)
