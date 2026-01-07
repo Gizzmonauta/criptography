@@ -21,9 +21,9 @@ def reverse_cipher(message: str) -> str:
     #     result.append(message[i])
     # return ''.join(result)
 
-def main():
+def main() -> None:
     print("Enter a message to reverse: ", end="")
-    message = input()
+    message: str = input()
     print(reverse_cipher(message))
 
 if __name__ == '__main__':

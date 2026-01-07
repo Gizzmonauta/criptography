@@ -38,7 +38,7 @@ def caesar_cipher(message: str, key: int, mode: Literal['encrypt', 'decrypt']) -
 
     return ''.join(translated)
 
-def main():
+def main() -> None:
     message: str = input("Enter the message you want to encrypt/decrypt: ")
     key: int = int(input("Enter the key (number): "))
     mode: str = input("Enter 'encrypt' to encrypt or 'decrypt' to decrypt: ")

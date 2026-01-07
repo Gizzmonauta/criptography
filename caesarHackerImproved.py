@@ -89,7 +89,7 @@ def parse_arguments() -> argparse.Namespace:
     )
     return parser.parse_args()
 
-def main():
+def main() -> None:
     args: argparse.Namespace = parse_arguments()
     result: List[Tuple[int, str]] = hack_caesar_cipher(args.message, args.symbols)
 
